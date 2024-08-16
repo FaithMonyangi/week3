@@ -1,74 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+	
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Queen's Fries Menu</title>
-    <style>
-      body {
-        background: white;
-      }
-      h1 {
-        text-align: center;
-        color: #171457;
-      }
+	
+    <link rel="stylesheet" href="morara.css">
+    <script src="morara.js"></script>
 
-      h3 {
-        text-align: center;
-      }
-      p {
-        text-align: center;
-      }
-      button {
-        display: block;
-        margin: 50px auto;
-        background: #582b3b;
-        color: white;
-        border: 1px solid black;
-        padding: 20px 28px;
-        border-radius: 30px;
-        box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
-        font-size: 16px;
-        line-height: 22px;
-        transition: all 200ms ease;
-        cursor: pointer;
-      }
-      button:hover {
-        background: white;
-        color: #582b3b;
-      }
-      .imgone {
-        max-width: 20%;
-        display: block;
-        margin: 0 auto;
-        width: 250px;
-        height: 150px;
-        border-radius: 30px;
-      }
-      .two {
-        max-width: 100%;
-        display: block;
-        margin: 0 auto;
-        width: 150px;
-        height: 150px;
-        margin-bottom: 10px;
-        border-radius: 15px;
-        object-fit: cover;
-      }
-      .menu-container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto auto;
-        gap: 10px;
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-      .menu-item {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-    </style>
   </head>
   <body>
     <img
@@ -135,34 +75,6 @@
         ></i
       >
     </p>
-    <script>
-      function placeOrder() {
-        let snack = prompt("What snack would you like to order?");
-        let quantity = parseInt(
-          prompt("What quantity would you like to order?")
-        );
-        let amountPayable = totalPrice(snack, quantity);
-        alert("Amount payable: " + amountPayable);
-      }
-      function totalPrice(snack, quantity) {
-        let price = 0;
-        if (snack.toLowerCase() === "plain fries") {
-          price = 200;
-        } else if (snack.toLowerCase() === "fries chicken") {
-          price = 500;
-        } else if (snack.toLowerCase() === "samosa") {
-          price = 80;
-        } else if (snack.toLowerCase() === "sausages") {
-          price = 100;
-        } else if (snack.toLowerCase() === "burger") {
-          price = 450;
-        } else if (snack.toLowerCase() === "chicken wings") {
-          price = 600;
-        }
-        return price * quantity;
-      }
-      let placeOrderButton = document.querySelector("button");
-      placeOrderButton.addEventListener("click", placeOrder);
-    </script>
+
   </body>
 </html>
